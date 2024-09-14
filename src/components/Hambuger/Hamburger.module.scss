@@ -1,0 +1,138 @@
+.container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 25px;
+  z-index: 1100;
+  transition: transform 0.3s ease-in-out; /* Optional: Adds smooth transition to the hamburger icon */
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.line1 {
+  transform-origin: top left;
+}
+
+.line2 {
+  transform-origin: center;
+}
+
+.line3 {
+  transform-origin: bottom left;
+}
+
+.open .line1 {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.open .line2 {
+  opacity: 0;
+}
+
+.open .line3 {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw; /* Adjusted for mobile */
+  height: 100vh;
+  background-color: #0f141e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.menu.open {
+  transform: translateX(0%);
+}
+
+.menuItems {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.menuItem {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0; /* Adjusted for vertical padding */
+  // overflow: hidden;
+  width: 100%; /* Ensure full width */
+}
+
+.menuItem a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  width: 100%; /* Ensure full width of menu item */
+  height: 100%; /* Ensure full height of menu item */
+  padding: 10px 20px; /* Ensure padding is consistent */
+  box-sizing: border-box; /* Include padding in width/height calculation */
+  position: relative;
+}
+
+.menuItem a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hover color */
+}
+
+.menuItem:hover .hoverEffect {
+  transform: scaleX(1); /* Show hover effect on hover */
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform-origin: bottom left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    width: 30px;
+    height: 20px;
+  }
+
+  .line {
+    height: 3px;
+  }
+
+  .menuItem {
+    font-size: 28px;
+    padding: 8px 0; /* Adjusted for smaller screens */
+  }
+}

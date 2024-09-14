@@ -1,0 +1,63 @@
+// TransitionLink.module.scss
+
+// Keyframes for fade-in and slide-up
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: #0f141e;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: #0f141e;
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: #0f141e;
+  }
+  100% {
+    opacity: 1;
+    background-color: #0f141e;
+    transform: translateY(-100%);
+  }
+}
+
+// Styles for sleep transition
+.sleep-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999999999;
+  animation: fadeInSlideUp 2s cubic-bezier(0.3, 0, 0.5, 1) forwards;
+
+  h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1rem; /* Adjust the margin as needed */
+    font-size: 2rem; /* Adjust the font size as needed */
+    color: white;
+    background-color: transparent;
+    opacity: 0;
+    animation: fadeInSlideUp 2s cubic-bezier(0.3, 0, 0.5, 1) forwards;
+  }
+}

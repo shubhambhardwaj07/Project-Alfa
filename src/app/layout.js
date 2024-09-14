@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { FlipNav } from "@/components/NavBar/NavBar";
+import { Hamburger } from "@/components/Hambuger/Hamburger";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <FlipNav />
+        <Hamburger />
         {children}
       </body>
     </html>
