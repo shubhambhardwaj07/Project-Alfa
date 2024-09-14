@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
         <FlipNav />
         <Hamburger />
         {children}
+        <div id="portal-root"></div>
       </body>
-      <div id="portal-root"></div>
     </html>
   );
 }
