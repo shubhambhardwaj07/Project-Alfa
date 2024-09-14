@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
         <Hamburger />
         {children}
       </body>
+      <div id="portal-root"></div>
     </html>
   );
 }

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { TransitionLoader } from "../TransitionLoader/TransitionLoader";
 import styles from "./TransitionLink.module.scss"; // Import the SCSS module
+import { Portal } from "../Portal/Portal";
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -14,12 +15,13 @@ export const TransitionLink = ({ children, href, ...props }) => {
   const [showSleepTransition, setShowSleepTransition] = useState(false);
 
   const handleTransition = async (e) => {
+    props?.parentClickHandler && props?.parentClickHandler();
     e.preventDefault();
 
     setShowSleepTransition(true); // Show the sleep transition with background image
 
     await sleep(2000); // Wait for the sleep animation to finish
-    props?.parentClickHandler();
+
     router.push(href); // Navigate to the new page
 
     setShowSleepTransition(false); // Hide the sleep transition after navigation
@@ -31,12 +33,14 @@ export const TransitionLink = ({ children, href, ...props }) => {
         {children}
       </Link>
       {showSleepTransition && (
-        <div className={styles["sleep-transition"]}>
-          {" "}
-          {/* Apply the module class */}
-          <TransitionLoader />
-          <h1>Ruko Zara Wait Karo..</h1>
-        </div>
+        <Portal containerId="portal-root">
+          <div className={styles["sleep-transition"]}>
+            {" "}
+            {/* Apply the module class */}
+            <TransitionLoader />
+            <h1>Ruko Zara Wait Karo..</h1>
+          </div>
+        </Portal>
       )}
     </>
   );
