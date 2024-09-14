@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "./InitialLoader.module.css";
+import styles from "./InitialLoader.module.scss";
 
 export const InitialLoader = () => {
   const messages = ["स्वागत है", "आपका दिन शुभ हो", "खुश रहो"]; // Example messages in Hindi
@@ -12,7 +12,7 @@ export const InitialLoader = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 5000 }}
       >
         शुभ
       </motion.div>
@@ -24,7 +24,7 @@ export const InitialLoader = () => {
             className={styles.message}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: index * 1.5 }}
+            transition={{ duration: 100000, delay: index * 1.5 }}
           >
             {message}
           </motion.div>

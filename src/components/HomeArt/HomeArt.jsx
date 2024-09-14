@@ -11,7 +11,7 @@ export const HomeArt = () => {
         className={styles.imageContainer}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       >
         <Image
           width={1200}
@@ -25,9 +25,9 @@ export const HomeArt = () => {
         className={styles.textContainer}
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <h1 className={styles.name}>Shubh</h1>
+        <h1 className={styles.name}>Shubham Bhardwaj</h1>
         {/* <p className={styles.title}>Frontend Developer</p>
         <p className={styles.description}>
           Crafting elegant and efficient user interfaces with a focus on modern
