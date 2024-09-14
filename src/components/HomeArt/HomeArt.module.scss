@@ -1,0 +1,82 @@
+// HomeArt.module.scss
+
+.container {
+  // backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center; // Center content vertically
+  justify-content: space-between; // Space out the image and text
+  height: 100vh; // Full viewport height
+  border-radius: 15px; // Optional: rounded corners
+  position: relative;
+  overflow: hidden; // Prevent scrollbars
+}
+
+.imageContainer {
+  position: absolute;
+  right: 0; // Align to the right
+  bottom: 0; // Align to the bottom
+  width: 50vw; // Adjust width as needed
+  height: 100vh; // Full height
+  overflow: hidden;
+  border-radius: 10px;
+  backdrop-filter: grayscale(12);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply; // Blend mode to mix with the background
+}
+
+.textContainer {
+  margin-left: 20px; // Space from the left edge
+  max-width: 50%; // Ensure text container takes up half the space
+  z-index: 10; // Ensure text is above other elements
+  // backdrop-filter: blur(10px); // Apply blurring to the text container as well
+  padding: 20px; // Add some padding
+  border-radius: 10px; // Optional: rounded corners for text container
+}
+
+.name {
+  font-size: 3.5rem; // Bold size for name
+  font-weight: 900; // Extra bold
+  color: #171717;
+  margin: 0;
+  background: linear-gradient(to right, #171717, #fcfaf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  padding: 0 10px; // Add some padding
+  transition: background 0.5s ease; // Smooth transition for gradient
+}
+
+.name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #e91e63, #ff9800);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.name:hover::after {
+  transform: scaleX(1);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+}

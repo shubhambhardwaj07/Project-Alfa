@@ -1,0 +1,32 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/images/welcome-art1.jpg");
+  background-size: contain; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevents repeating of the image */
+  background-attachment: fixed; /* Makes sure the image stays fixed while scrolling */
+  background-color: var(--background); /* Fallback color */
+  color: var(--text-primary);
+  mix-blend-mode: difference;
+  font-family: "Arial", sans-serif;
+}
+
+.name {
+  font-size: 140px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.messages {
+  text-align: center;
+}
+
+.message {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
