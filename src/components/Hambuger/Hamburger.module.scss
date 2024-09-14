@@ -142,9 +142,11 @@
     width: 30px;
     height: 20px;
   }
-
+  .menu {
+    width: 100%; /* Adjusted for mobile */
+  }
   .line {
-    height: 3px;
+    height: 1px;
   }
 
   .menuItem {
