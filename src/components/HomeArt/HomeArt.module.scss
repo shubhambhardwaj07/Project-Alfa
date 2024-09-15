@@ -13,16 +13,16 @@
 
 .backgroundText {
   position: absolute;
-  top: 20%;
+  top: 28%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 14rem; // Large font size for the background text
+  font-size: 24rem;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.05); // Very light white color for subtlety
-  text-shadow: 1px 1px 4px rgb(15, 20, 30, 0.8); // Shadow for better visibility
-  z-index: 0; // Ensure it's behind everything
-  pointer-events: none; // Prevent interaction
-  white-space: nowrap; // Prevent wrapping
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 7px rgba(15, 20, 30, 0.1);
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .imageContainer {
@@ -95,4 +95,14 @@
   color: #444;
   max-width: 600px;
   margin: 0 auto;
+}
+.splash {
+  position: relative;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f141e; // Dark blue base color
+  overflow: hidden; // Prevent scrollbars
+  z-index: 0;
 }
