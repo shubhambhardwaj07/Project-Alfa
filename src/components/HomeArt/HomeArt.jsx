@@ -34,10 +34,10 @@ export const HomeArt = () => {
         <div className={styles.splash}>
           <h1 className={styles.name}>Shubham Bhardwaj</h1>
           <p className={styles.title}>Frontend Developer</p>
-          <p className={styles.description}>
+          {/* <p className={styles.description}>
             Crafting elegant and efficient user interfaces with a focus on
             modern web technologies.
-          </p>
+          </p> */}
         </div>
       </motion.div>
     </div>

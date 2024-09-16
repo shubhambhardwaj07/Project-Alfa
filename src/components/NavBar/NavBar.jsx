@@ -1,25 +1,14 @@
 import Link from "next/link";
 import { TransitionLink } from "../TransitionLink/TransitionLink";
+import styles from "./Navbar.module.scss";
 
 const Logo = () => {
-  // Temp logo from https://logoipsum.com/
-  return <div>Shubham Bhardwaj</div>;
+  return <div className={styles.logo}>Shubham Bhardwaj</div>;
 };
-
-export const FlipNav = () => {
+export const NavBar = () => {
   return (
-    <nav className="p-4 flex items-center justify-between relative">
-      <NavLeft />
-    </nav>
-  );
-};
-
-const NavLeft = () => {
-  return (
-    <div className="flex items-center gap-6">
-      <TransitionLink href="/">
-        <Logo />
-      </TransitionLink>
-    </div>
+    <TransitionLink href="/">
+      <Logo />
+    </TransitionLink>
   );
 };

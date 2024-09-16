@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background-color: #0f141e; // Dark background color
+  background: linear-gradient(to right, rgba(15, 20, 30, 0.4), white);
   overflow: hidden; // Prevent scrollbars
 }
 
@@ -16,9 +16,9 @@
   top: 28%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24rem;
+  font-size: 16rem;
   font-weight: 900;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.3);
   text-shadow: 1px 1px 7px rgba(15, 20, 30, 0.1);
   z-index: 0;
   pointer-events: none;
@@ -102,7 +102,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0f141e; // Dark blue base color
+  background-color: transparent; // Dark blue base color
   overflow: hidden; // Prevent scrollbars
   z-index: 0;
 }

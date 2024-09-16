@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Hamburger } from "../Hambuger/Hamburger";
-import { FlipNav } from "../NavBar/NavBar";
+import { NavBar } from "../NavBar/NavBar";
 import { InitialLoader } from "../InitialLoader/InitialLoader";
 
 export const LayoutWrapper = ({ children }) => {
@@ -18,7 +18,7 @@ export const LayoutWrapper = ({ children }) => {
       {isLoading && <InitialLoader />}
 
       <div>
-        <FlipNav />
+        <NavBar />
         <Hamburger />
         {children}
       </div>
