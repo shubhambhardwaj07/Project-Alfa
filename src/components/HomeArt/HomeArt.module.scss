@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, rgba(15, 20, 30, 0.4), white);
+  // background: linear-gradient(to right, rgba(15, 20, 30, 0.4), white);
   overflow: hidden; // Prevent scrollbars
 }
 
@@ -29,8 +29,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 50vw; // Adjust width as needed
-  height: 100vh; // Full height
+  width: 46vw; // Adjust width as needed
+  height: auto; // Full height
   overflow: hidden;
   border-radius: 10px;
   z-index: 1; // Ensure image is above background text

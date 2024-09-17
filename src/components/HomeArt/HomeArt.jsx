@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./HomeArt.module.scss";
 import Image from "next/image";
+import { MouseScroll } from "../MouseScroll/MouseScroll";
 
 export const HomeArt = () => {
   return (
@@ -20,7 +21,7 @@ export const HomeArt = () => {
         <Image
           width={1200}
           height={1200}
-          src="/images/shubh.png"
+          src="/images/shubh-main.png"
           alt="Shubham Bhardwaj"
           className={styles.photo}
         />
@@ -40,6 +41,7 @@ export const HomeArt = () => {
           </p> */}
         </div>
       </motion.div>
+      <MouseScroll id="contribution-section" />
     </div>
   );
 };

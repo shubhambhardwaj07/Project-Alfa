@@ -1,0 +1,56 @@
+/* Contribution.module.scss */
+
+.contributionContainer {
+  scroll-snap-align: start; /* Ensure the section aligns at the start */
+  background: #1a1a1a;
+  height: 100vh; /* Ensure the section takes up the full viewport height */
+}
+
+.contributionSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid #d3d3d3;
+  border-bottom: 4px solid #d3d3d3;
+  padding: 20px;
+  text-align: center;
+  height: 100%; /* Ensure the section takes up its parent container's height */
+  opacity: 0;
+  // transform: translateY(50px);
+  transition: opacity 0.8s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h2 {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+
+  .animatedText {
+    font-size: 32px;
+    color: #ffffff;
+    max-width: 90rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .word {
+    display: inline-block;
+    opacity: 0;
+    // transform: translateX(30px);
+    transition: opacity 0.4s ease-in-out;
+    //  transform 0.5s ease-out;
+
+    &.visibleWord {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

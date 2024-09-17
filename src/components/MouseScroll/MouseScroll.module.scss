@@ -1,0 +1,44 @@
+/* MouseScroll.module.scss */
+.mouseIcon {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add transform for scaling */
+  opacity: 1;
+
+  /* Center the scaling effect */
+  transform-origin: center;
+
+  &:hover {
+    transform: scale(1); /* Scale up on hover */
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+    animation: moveDot 1.5s ease-in-out infinite;
+  }
+
+  @keyframes moveDot {
+    0% {
+      transform: translateY(5px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(5px);
+    }
+  }
+}

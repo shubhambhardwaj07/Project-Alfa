@@ -31,3 +31,13 @@ body {
   transition-timing-function: ease-in-out;
   transition-duration: 500ms;
 }
+
+/* Add this to your global styles or a specific stylesheet */
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+body {
+  scroll-snap-type: y mandatory; /* Apply vertical scroll snapping */
+}
