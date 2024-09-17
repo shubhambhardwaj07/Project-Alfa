@@ -40,4 +40,6 @@ html {
 
 body {
   scroll-snap-type: y mandatory; /* Apply vertical scroll snapping */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
