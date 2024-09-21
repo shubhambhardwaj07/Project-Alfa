@@ -12,12 +12,7 @@ export const HomeArt = () => {
       {/* Background text "SHUBH" for visual effect */}
       <div className={styles.backgroundText}>SHUBH</div>
 
-      <motion.div
-        className={styles.imageContainer}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-      >
+      <div className={styles.imageContainer}>
         <Image
           width={1200}
           height={1200}
@@ -25,13 +20,8 @@ export const HomeArt = () => {
           alt="Shubham Bhardwaj"
           className={styles.photo}
         />
-      </motion.div>
-      <motion.div
-        className={styles.textContainer}
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-      >
+      </div>
+      <div className={styles.textContainer}>
         <div className={styles.splash}>
           <h1 className={styles.name}>Shubham Bhardwaj</h1>
           <p className={styles.title}>Frontend Developer</p>
@@ -40,7 +30,7 @@ export const HomeArt = () => {
             modern web technologies.
           </p> */}
         </div>
-      </motion.div>
+      </div>
       <MouseScroll id="contribution-section" />
     </div>
   );

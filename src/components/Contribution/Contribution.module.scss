@@ -3,11 +3,11 @@
 .contributionContainer {
   scroll-snap-align: start; /* Ensure the section aligns at the start */
   background: #1a1a1a;
-  height: 100vh; /* Ensure the section takes up the full viewport height */
+  height: 100dvh; /* Ensure the section takes up the full viewport height */
 }
 
 .contributionSection {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
