@@ -1,9 +1,38 @@
-.logo {
+.logoContainer {
   position: fixed;
-  top: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
-  font-size: 24px;
-  font-weight: bold;
+  top: 2rem; /* Adjust as needed */
+  left: 2rem; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #171717; // Optional border
+  border-radius: 5px; // Optional rounded corners
+  max-width: 170px;
   z-index: 1000;
-  color: #171717; /* Or your preferred color */
+  transition: background-color 0.3s, color 0.3s; // Smooth transition for color changes
+}
+
+.light {
+  background-color: white; // Light background
+  color: black; // Dark text color
+}
+
+.dark {
+  background-color: black; // Dark background
+  color: white; // Light text color
+}
+
+.logoText {
+  margin-right: 10px; // Adjust spacing as needed
+}
+
+.uiDeveloper {
+  display: block; // Stack the text
+  font-size: 14px; // Adjust size as needed
+  color: grey; // Optional for the subtitle
+}
+
+.logoIcon img {
+  width: 40px; // Adjust size as needed
+  height: auto;
 }
