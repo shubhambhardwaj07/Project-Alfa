@@ -37,32 +37,26 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
-  // background-image: url("/images/welcome-art1.jpg");
-  background-size: contain; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevents repeating of the image */
-  background-attachment: fixed; /* Makes sure the image stays fixed while scrolling */
-  /* Fallback color */
+  width: 100%;
   color: var(--text-primary);
-  mix-blend-mode: difference;
   font-family: "Arial", sans-serif;
   background-color: #0f141e;
-  animation: fadeInSlideUp 2s cubic-bezier(0.3, 0, 0.5, 1) forwards;
-  mix-blend-mode: normal;
 }
 
 .name {
   font-size: 140px;
   font-weight: bolder;
   margin-bottom: 20px;
+  color: white;
 }
 
 .messages {
   text-align: center;
+  color: white;
 }
 
 .message {
   font-size: 44px;
   margin-bottom: 10px;
+  color: white;
 }

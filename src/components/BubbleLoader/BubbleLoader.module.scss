@@ -1,0 +1,35 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  opacity: 0;
+  border: 3px solid white;
+  animation: anim 4s infinite linear;
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+    width: 0vmin;
+    height: 0vmin;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+    width: 100vmin;
+    height: 100vmin;
+  }
+}

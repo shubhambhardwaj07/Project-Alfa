@@ -1,16 +1,10 @@
-import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { LayoutWrapper } from "@/components/LayoutWrapper/LayoutWrapper";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const montserrat = Montserrat({
+  weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -21,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${montserrat.variable} ${montserrat.variable}`}>
         <LayoutWrapper children={children} />
         <div id="portal-root"></div>
       </body>
