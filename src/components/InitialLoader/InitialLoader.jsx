@@ -14,7 +14,7 @@ export const InitialLoader = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 3 }}
       >
         शुभ
       </motion.div>
@@ -26,7 +26,7 @@ export const InitialLoader = () => {
             className={styles.message}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2, delay: index * 1.5 }}
+            transition={{ duration: 3, delay: index * 1.5 }}
           >
             {message}
           </motion.div>

@@ -20,7 +20,7 @@ export const TransitionLink = ({ children, href, ...props }) => {
 
     setShowSleepTransition(true); // Show the sleep transition with background image
 
-    await sleep(2000); // Wait for the sleep animation to finish
+    await sleep(2500); // Wait for the sleep animation to finish
 
     router.push(href); // Navigate to the new page
 
