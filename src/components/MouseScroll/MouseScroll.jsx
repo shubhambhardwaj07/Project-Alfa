@@ -14,8 +14,8 @@ export const MouseScroll = ({ id }) => {
   };
 
   const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
+    const scrollPosition = window?.scrollY;
+    const windowHeight = window?.innerHeight;
 
     // Calculate new opacity based on scroll position
     const newOpacity = Math.max(0, 1 - scrollPosition / windowHeight);

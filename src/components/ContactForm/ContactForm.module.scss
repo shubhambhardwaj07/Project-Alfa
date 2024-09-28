@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Left side - Form container */
+.formContainer {
+  width: 50%;
+  padding: 2rem;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.input,
+.textarea {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+/* Right side - Letter template */
+.letterContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #e4e1dc; /* Ancient parchment look */
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.letter {
+  width: 90%;
+  height: 90%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  font-family: "Great Vibes", cursive; /* Add fairy hand font */
+  font-size: 1.2rem;
+  transition: transform 1.5s ease;
+}
+
+.fairyHand {
+  font-size: 1.5rem;
+  color: #2b2b2b;
+  line-height: 1.5;
+}
+
+.animated .letter {
+  transform: translateY(-100%) rotate(-20deg); /* Example of flying animation */
+  opacity: 0;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}

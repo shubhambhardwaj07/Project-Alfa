@@ -1,6 +1,6 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: rgb(23, 23, 23);
 }
 
 html,
@@ -28,8 +28,73 @@ a {
   }
 }
 
-/* body {
-  transition-property: opacity, transform, filter, background;
-  transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
-} */
+#mePin {
+  path {
+    fill: rgb(23, 23, 23);
+  }
+
+  .ring_outer {
+    animation: opacityPulse 2s cubic-bezier(1, 0.14, 1, 1);
+    animation-iteration-count: infinite;
+    opacity: 0.5;
+  }
+
+  .ring_inner {
+    animation: opacityPulse 2s cubic-bezier(0.4, 0.74, 0.56, 0.82);
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+  }
+}
+
+@keyframes opacityPulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90% {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 5px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -3px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  animation-name: bounceInDown;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.leaflet-control-attribution.leaflet-control {
+  display: none;
+}

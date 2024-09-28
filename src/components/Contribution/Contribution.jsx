@@ -11,7 +11,7 @@ export const Contribution = () => {
     const handleScroll = () => {
       if (ref.current) {
         const rect = ref.current.getBoundingClientRect();
-        const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
+        const isInView = rect.top < window?.innerHeight && rect.bottom >= 0;
         setInView(isInView);
       }
     };
