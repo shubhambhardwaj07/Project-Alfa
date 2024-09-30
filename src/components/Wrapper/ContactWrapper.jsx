@@ -1,10 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { ContactForm } from "../ContactForm/ContactForm";
-import { PunjabMap } from "../PunjabMap/PunjabMap";
+
+const PunjabMap = dynamic(() => import("../PunjabMap/PunjabMap"), {
+  ssr: false,
+});
 
 export const ContactWrapper = () => {
-  if (typeof window !== "undefined") return <></>;
   return (
     <>
       <PunjabMap />

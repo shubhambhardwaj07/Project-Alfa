@@ -1,11 +1,24 @@
 "use client";
 
 import React from "react";
-import styles from "./PunjabMap.module.scss";
 import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css";
+import "leaflet-defaulticon-compatibility";
+import styles from "./PunjabMap.module.scss";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 const iconImage = "/images/location.gif";
 import L from "leaflet";
+import dynamic from "next/dynamic";
+
+// const { MapContainer, TileLayer, Marker, Popup } = dynamic(
+//   () => import("react-leaflet"),
+//   {
+//     ssr: false, // This ensures the component is not SSR'd
+//   }
+// );
+// const L = dynamic(() => import("leaflet"), {
+//   ssr: false, // This ensures the component is not SSR'd
+// });
 
 const svg = `
 <svg id="mePin" xmlns="http://www.w3.org/2000/svg" width="43.3" height="42.4" viewBox="0 0 43.3 42.4">
