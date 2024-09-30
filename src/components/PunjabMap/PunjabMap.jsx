@@ -48,7 +48,7 @@ export const PunjabMap = () => {
         style={{ height: "100vh", width: "100%" }} // Ensure full width and height
       >
         <TileLayer
-          url="https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png" // Use a dark-themed tile layer
+          url="https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png?api_key=8523e48c-69a1-4363-a608-2ac1fa9d60ce" // Use a dark-themed tile layer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
         <Marker position={position} icon={iconPerson}>
