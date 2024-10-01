@@ -10,7 +10,7 @@ export const LayoutWrapper = ({ children }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 200000000);
+    }, 4000);
   }, []);
 
   return (

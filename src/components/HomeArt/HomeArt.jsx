@@ -23,8 +23,8 @@ export const HomeArt = () => {
       </div>
       <div className={styles.textContainer}>
         <div className={styles.splash}>
-          <h1 className={styles.name}>Shubham Bhardwaj</h1>
-          <p className={styles.title}>Frontend Developer</p>
+          <h1 className={styles.name}></h1>
+          <p className={styles.title}></p>
           {/* <p className={styles.description}>
             Crafting elegant and efficient user interfaces with a focus on
             modern web technologies.

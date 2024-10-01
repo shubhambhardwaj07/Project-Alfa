@@ -15,14 +15,16 @@ export const TransitionLink = ({ children, href, ...props }) => {
   const [showSleepTransition, setShowSleepTransition] = useState(false);
 
   const handleTransition = async (e) => {
+    setShowSleepTransition(true);
     props?.parentClickHandler && props?.parentClickHandler();
     e.preventDefault();
 
-    setShowSleepTransition(true); // Show the sleep transition with background image
-
+    // Show the sleep transition with background image
+    await sleep(1000);
+    router.push(href);
     await sleep(2500); // Wait for the sleep animation to finish
 
-    router.push(href); // Navigate to the new page
+    // Navigate to the new page
 
     setShowSleepTransition(false); // Hide the sleep transition after navigation
   };
