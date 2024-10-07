@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Hamburger } from "../Hambuger/Hamburger";
 import { NavBar } from "../NavBar/NavBar";
 import { InitialLoader } from "../InitialLoader/InitialLoader";
+import { Footer } from "../Footer/Footer";
 
 export const LayoutWrapper = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,7 @@ export const LayoutWrapper = ({ children }) => {
         <NavBar />
         <Hamburger />
         {children}
+        <Footer />
       </div>
     </>
   );

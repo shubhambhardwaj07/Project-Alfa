@@ -1,11 +1,9 @@
-import { Montserrat } from "next/font/google";
-import "./globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import { LayoutWrapper } from "@/components/LayoutWrapper/LayoutWrapper";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "./globals.css";
 
-const montserrat = Montserrat({
-  weight: "400",
-  subsets: ["latin"],
-});
+config.autoAddCss = false;
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${montserrat.variable}`}>
+      <body>
         <LayoutWrapper children={children} />
         <div id="portal-root"></div>
       </body>

@@ -3,9 +3,29 @@
   --foreground: rgb(23, 23, 23);
 }
 
+@font-face {
+  font-family: "Helvetica Neue Regular";
+  src: url("/fonts/HelveticaNeueHv.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: url("/fonts/HelveticaNeueHv.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Ultra Light";
+  src: url("/fonts/HelveticaNeueUltraLightv130.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Light"; /* Replace with the actual font name */
+  src: url("/fonts/Light.ttf") format("truetype");
+}
+
 html,
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Helvetica Light", sans-serif;
   font-optical-sizing: auto;
   max-width: 100vw;
   overflow-x: hidden;
