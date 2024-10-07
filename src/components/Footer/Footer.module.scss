@@ -6,12 +6,13 @@
   height: 100dvh;
   padding: 2rem;
   background-color: #191a1d;
-  color: #fff;
+  color: #dde0e2;
   position: relative;
   background-image: url("/images/gravel.png");
   background-repeat: repeat;
   background-size: auto;
   background-position: center;
+  mix-blend-mode: exclusion;
 
   .socialLinks {
     display: flex;
@@ -29,7 +30,7 @@
       transition: color 0.3s ease, transform 0.3s ease;
 
       &:hover {
-        color: #ff5722;
+        // color: #ff5722;
         transform: scale(1.1);
       }
 
@@ -87,7 +88,6 @@
         transition: color 0.3s ease, transform 0.3s ease;
 
         &:hover {
-          color: #ff5722;
           transform: scale(1.1);
         }
       }
@@ -96,13 +96,14 @@
         font-size: 1.5rem;
         transition: color 0.3s ease, transform 0.3s ease; // Added animation for paragraph
 
-        &:hover {
-          color: #ff5722;
-        }
+        // &:hover {
+
+        // }
 
         // Add an animation to the heart icon
         .icon {
-          color: #ff5722; // Heart color
+          transform: scale(1.1);
+          // color: #ff5722; // Heart color
           animation: heartbeat 1s infinite; // Heartbeat animation
         }
       }
@@ -128,7 +129,7 @@
   .divider {
     width: 2px;
     height: 53px;
-    background-color: hsla(0, 0%, 96.5%, 0.1);
+    background-color: rgba(221, 224, 226, 0.1);
     -webkit-transform: rotate(20deg);
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
