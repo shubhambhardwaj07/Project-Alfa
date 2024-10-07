@@ -3,16 +3,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
   padding: 2rem;
-  background-color: #212a31;
+  background-color: #191a1d;
   color: #fff;
+  position: relative;
+  background-image: url("/images/gravel.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
 
   .socialLinks {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     margin-bottom: 2rem;
 
     .socialLink {
@@ -45,18 +50,40 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 900px;
+    font-size: 14px;
+    padding: 0 3rem;
+    position: relative; // Change to relative to allow absolute positioning of the crafted section
+    bottom: 2rem;
+    position: absolute;
+
+    // Mobile styles
+    @media (max-width: 768px) {
+      flex-direction: column; // Stack sections vertically
+      align-items: center; // Center the items
+      text-align: center; // Center text
+    }
+
+    // Desktop styles
+    @media (min-width: 769px) {
+      .linksSection,
+      .contactSection {
+        transition: transform 0.3s ease; // Animation on hover for desktop
+
+        // &:hover {
+        //   transform: translateY(-5px); // Slightly lift sections on hover
+        // }
+      }
+    }
 
     .linksSection,
     .nameSection,
     .contactSection {
-      flex: 1;
       text-align: center;
 
       a {
         color: #fff;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 14px;
         transition: color 0.3s ease, transform 0.3s ease;
 
         &:hover {
@@ -67,12 +94,43 @@
 
       p {
         font-size: 1.5rem;
-        transition: color 0.3s ease;
+        transition: color 0.3s ease, transform 0.3s ease; // Added animation for paragraph
 
         &:hover {
           color: #ff5722;
         }
+
+        // Add an animation to the heart icon
+        .icon {
+          color: #ff5722; // Heart color
+          animation: heartbeat 1s infinite; // Heartbeat animation
+        }
       }
     }
+    .linksSection {
+      a {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  // Animation keyframes for heartbeat
+  @keyframes heartbeat {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  .divider {
+    width: 2px;
+    height: 53px;
+    background-color: hsla(0, 0%, 96.5%, 0.1);
+    -webkit-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
   }
 }

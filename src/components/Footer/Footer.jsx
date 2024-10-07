@@ -2,12 +2,13 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
-  faFacebook,
   faInstagram,
   faLinkedin,
   faGithub,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons"; // Import specific brand icons
 import styles from "./Footer.module.scss";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
 const socialMediaLinks = [
   {
@@ -18,7 +19,7 @@ const socialMediaLinks = [
   {
     name: "",
     url: "https://facebook.com",
-    icon: faFacebook,
+    icon: faYoutube,
   },
   {
     name: "",
@@ -42,17 +43,26 @@ export const Footer = () => {
     <footer className={styles.footer}>
       {/* Social Media Links Section */}
       <div className={styles.socialLinks}>
-        {socialMediaLinks.map(({ name, url, icon }) => (
-          <Link
-            key={name}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.socialLink}
-          >
-            <FontAwesomeIcon icon={icon} className={styles.icon} size="4x" />
-            {name}
-          </Link>
+        {socialMediaLinks.map(({ name, url, icon }, index) => (
+          <>
+            <Link
+              key={name}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+            >
+              <FontAwesomeIcon
+                icon={icon}
+                className={styles.icon}
+                size="3x"
+                fa-sync
+                fa-spin
+              />
+              {name}
+            </Link>
+            {index !== 4 && <div className={styles.divider} />}
+          </>
         ))}
       </div>
 
@@ -60,19 +70,21 @@ export const Footer = () => {
       <div className={styles.mainFooter}>
         {/* First Section: Links */}
         <div className={styles.linksSection}>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/about">WORK</Link>
+          <Link href="/projects">PROJECTS</Link>
         </div>
 
         {/* Second Section: Name */}
         <div className={styles.nameSection}>
-          <p>Shubham Bhardwaj</p>
+          <p>
+            Crafted with{" "}
+            <FontAwesomeIcon icon={faHeart} className={styles.icon} />
+          </p>
         </div>
 
         {/* Third Section: Contact */}
         <div className={styles.contactSection}>
-          <Link href="mailto:contact@example.com">Contact Me</Link>
+          <Link href="mailto:contact@example.com">CONTACT ME</Link>
         </div>
       </div>
     </footer>
