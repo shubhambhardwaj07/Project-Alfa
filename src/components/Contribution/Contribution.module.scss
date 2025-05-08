@@ -1,8 +1,13 @@
 /* Contribution.module.scss */
 
 .contributionContainer {
-  scroll-snap-align: start; /* Ensure the section aligns at the start */
-  background: #1a1a1a;
+  background-color: #191a1d;
+  color: #dde0e2;
+  position: relative;
+  background-image: url("/images/gravel-1.png");
+  background-repeat: repeat;
+  background-size: 50px;
+  background-position: center;
   height: 100dvh; /* Ensure the section takes up the full viewport height */
 }
 
@@ -12,8 +17,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 4px solid #d3d3d3;
-  border-bottom: 4px solid #d3d3d3;
   padding: 20px;
   text-align: center;
   height: 100%; /* Ensure the section takes up its parent container's height */
